@@ -2,11 +2,12 @@
 /**
  * General Merge Sort
  * 
- *
- * 
- * @author Jun Kim, kim2674
+ * @author Jun Kim
  * @version 10/15/2019
- * @pso   P08
+ *
+ * General worst case O(Nlog(N))
+ * General space O(N)
+ *
  *
  */
 public class Merge extends Sort {
@@ -27,6 +28,7 @@ public class Merge extends Sort {
 
 		merge(a, 0, mid, a.length);
 	}
+	// Split an array into subarrays
 	private static void divide(Comparable[] A, int low, int high) {
 		int mid = (high + low)/2;
 
@@ -36,10 +38,8 @@ public class Merge extends Sort {
 
 			merge(A, low, mid, high);
 		}
-
-
-
 	}
+	// Merge two parts of the Array together
 	private static void merge(Comparable[] A, int low, int mid, int high) {
 		if (high - low == 2) {
 			if (!less(A[low], A[low + 1])) {
