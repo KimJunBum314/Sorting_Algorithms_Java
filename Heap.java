@@ -1,11 +1,12 @@
 /**
  * General Heap Sort
+ * uses a Max-Heap Order Array
  * 
- *
- * 
- * @@author Jun Kim, kim2674
+ * @author Jun Kim, kim2674
  * @version 10/15/2019
- * @pso   P08
+ *
+ * General Worse case O(Nlog(N))
+ * General Max-Heap Order O(N)
  *
  */
 public class Heap extends Sort {
@@ -20,7 +21,7 @@ public class Heap extends Sort {
 	 */
 	public static void sort(Comparable[] a) {
 		// Max-Heap Order O(N)
-		MaxHeap(a);
+		MaxHeap(a);  // If Array already Max-Heap Order, take out this function
 
 		// Actual Heap Sort Part
 		int size = a.length;
@@ -32,7 +33,7 @@ public class Heap extends Sort {
 		}
 
 	}
-	private static void MaxHeap(Comparable[] a) {
+	public static void MaxHeap(Comparable[] a) {
 		// Convert array to Max-heap order Array
 		for (int i = 1; i < a.length; i++) {
 			if (less(a[(i-1)/2], a[i])) {
