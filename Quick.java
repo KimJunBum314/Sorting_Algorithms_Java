@@ -1,10 +1,13 @@
 /**
- * General Quick Sort
+ * General In-place Quick Sort
  *
  * 
- * @author Jun Kim, kim2674
+ * @author Jun Kim
  * @version 10/15/2019
- * @pso   P08
+ *
+ * General worse Case O(N^2)
+ * General Average Case O(Nlog(N))
+ * General Space O(log(N))
  *
  */
 public class Quick extends Sort {
